@@ -55,10 +55,7 @@ We conduct experiments on the **RadioML 2016.10a** dataset.
 
 ### 🔽 Download
 
-The original dataset can be obtained from:
-
-- **DeepSig Official Website**
-- **DeepSig: AI-Native Wireless Communications**
+The datasets can be downloaded from [DeepSig Official Website](https://www.deepsig.ai/).
 
 ---
 
@@ -144,7 +141,7 @@ python main.py --resume checkpoint/2016.10a_.pkl
 The repository includes the confusion matrix of **DCS-Net at 18 dB**:
 
 <div align="center">
-  <img src="assets/confusion_metrics_18dB.png" alt="Confusion Matrix at 18 dB" width="700"/>
+  <img src="assets/confusion_metrics_18dB.png" alt="Confusion Matrix at 18 dB" width="420"/>
 </div>
 
 ---
