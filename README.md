@@ -17,11 +17,11 @@
 
 ## 📌 Affiliations
 
-- <span style="color:#2563EB;"><b>Huimeisun</b></span> — Suzhou University of Technology  
-- <span style="color:#7C3AED;"><b>Ziwen Qin</b></span> — Suzhou University of Technology  
-- <span style="color:#EA580C;"><b>Wangye Jiang</b></span> — Suzhou University of Technology  
-- <span style="color:#059669;"><b>Haoming Yang</b></span> — Jinling Institute of Technology  
-- <span style="color:#DC2626;"><b>Jingya Zhang</b></span> — Suzhou University of Technology  
+- `<span style="color:#2563EB;"><b>`Huimei Sun`</b>` — Suzhou University of Technology
+- `<span style="color:#7C3AED;"><b>`Ziwen Qin`</b>` — Suzhou University of Technology
+- `<span style="color:#EA580C;"><b>`Wangye Jiang`</b>` — Suzhou University of Technology
+- `<span style="color:#059669;"><b>`Haoming Yang`</b>` — Jinling Institute of Technology
+- `<span style="color:#DC2626;"><b>`Jingya Zhang`</b>` — Suzhou University of Technology
 
 ---
 
@@ -35,11 +35,17 @@ This repository contains the official implementation of **DCS-Net**, a **physica
 
 DCS-Net jointly models:
 
-- <span style="color:#2563EB;"><b>Raw I/Q features</b></span>  
-- <span style="color:#059669;"><b>Magnitude / envelope information</b></span>  
-- <span style="color:#DC2626;"><b>Phase-difference-aware representations</b></span>  
+- `<span style="color:#2563EB;"><b>`Raw I/Q features`</b>`
+- `<span style="color:#059669;"><b>`Magnitude / envelope information`</b>`
+- `<span style="color:#DC2626;"><b>`Phase-difference-aware representations`</b>`
 
 These complementary branches are fused together to improve recognition performance in difficult Doppler degradation scenarios.
+
+<div align="center">
+  <img src="assets/model_architecture.png" alt="DCS-Net Model Architecture" width="600"/>
+  <br>
+  <em>Figure 1: DCS-Net model architecture</em>
+</div>
 
 ---
 
@@ -49,9 +55,9 @@ We conduct experiments on the **RadioML 2016.10a** dataset.
 
 ### Dataset Summary
 
-| Dataset | Modulation Formats | Samples |
-|:--|:--|:--:|
-| **RML2016.10a** | 8 digital formats: `8PSK`, `BPSK`, `CPFSK`, `GFSK`, `PAM4`, `16QAM`, `64QAM`, `QPSK` <br/> 3 analog formats: `AM-DSB`, `AM-SSB`, `WBFM` | `(2 × 128)` |
+| Dataset               | Modulation Formats                                                                                                                                               |    Samples    |
+| :-------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------: |
+| **RML2016.10a** | 8 digital formats:`8PSK`, `BPSK`, `CPFSK`, `GFSK`, `PAM4`, `16QAM`, `64QAM`, `QPSK` `` 3 analog formats: `AM-DSB`, `AM-SSB`, `WBFM` | `(2 × 128)` |
 
 ### 🔽 Download
 
@@ -63,23 +69,25 @@ The datasets can be downloaded from [DeepSig Official Website](https://www.deeps
 
 ```text
 DCS-Net/
-├─ README.md
-├─ LICENSE
-├─ requirements.txt
-├─ main.py
-├─ dataset_process.py
-├─ assets/
-│  └─ confusion_metrics_18dB.png
-├─ models/
-│  └─ model.py
-├─ data_loader/
-│  └─ data_loader.py
-└─ util/
-   ├─ config.py
-   ├─ early_stop.py
-   ├─ logger.py
-   ├─ training.py
-   └─ utils.py
+├── .gitignore
+├── LICENSE
+├── README.md
+├── main.py
+├── requirements.txt
+├── assets/
+│   ├── confusion_metrics_18dB.png
+│   ├── contrast_experiment.png
+│   └── model_architecture.png
+├── data_loader/
+│   └── data_loader.py
+├── models/
+│   └── model.py
+└── util/
+    ├── config.py
+    ├── early_stop.py
+    ├── logger.py
+    ├── training.py
+    └── utils.py
 ```
 
 ## 🛠 Data Preparation
@@ -138,10 +146,18 @@ python main.py --resume checkpoint/2016.10a_.pkl
 
 ## 📊 Results
 
-The repository includes the confusion matrix of **DCS-Net at 18 dB**:
+The repository includes experimental results showing the performance of DCS-Net:
 
 <div align="center">
   <img src="assets/confusion_metrics_18dB.png" alt="Confusion Matrix at 18 dB" width="420"/>
+  <br>
+  <em>Figure 2: Confusion matrix of DCS-Net at 18 dB SNR</em>
+</div>
+
+<div align="center">
+  <img src="assets/contrast_experiment.png" alt="Contrast Experiment Results" width="600"/>
+  <br>
+  <em>Figure 3: Contrast experiment results comparing DCS-Net with baseline methods</em>
 </div>
 
 ---

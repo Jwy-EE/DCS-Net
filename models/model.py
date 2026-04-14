@@ -32,7 +32,7 @@ class MultiScaleFeatureBlock(nn.Module):
     def forward(self, x):
         return self.net(x)
 
-class LSKA1D(nn.Module):
+class LKA1D(nn.Module):
     def __init__(self, dim):
         super().__init__()
         self.conv_local = nn.Conv1d(dim, dim, kernel_size=5, padding=2, groups=dim)
@@ -65,7 +65,7 @@ class DCS_Net(nn.Module):
             nn.Hardswish()
         )
         
-        self.feature_gate = LSKA1D(dim=128)
+        self.feature_gate = LKA1D(dim=128)
         
         self.pool = nn.AdaptiveAvgPool1d(1)
         self.classifier = nn.Sequential(
