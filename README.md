@@ -2,7 +2,7 @@
 
 # DCS-Net
 
-<h3><span style="color:#4F46E5;">A Physical-aware Deep Network</span> for <span style="color:#059669;">Robust Modulation Classification</span> under <span style="color:#DC2626;">High-dynamic Doppler Scenarios</span></h3>
+<h3><span style="color:#4F46E5;">Physical-aware Deep Network</span> for <span style="color:#059669;">Robust Modulation Classification</span>
 
 <p>
   <img src="https://img.shields.io/badge/Python-3.9+-3776AB?style=for-the-badge&logo=python&logoColor=white" />
@@ -17,11 +17,12 @@
 
 ## 📌 Affiliations
 
-- `<span style="color:#2563EB;"><b>`Huimei Sun`</b>` — Suzhou University of Technology
-- `<span style="color:#7C3AED;"><b>`Ziwen Qin`</b>` — Suzhou University of Technology
-- `<span style="color:#EA580C;"><b>`Wangye Jiang`</b>` — Suzhou University of Technology
-- `<span style="color:#059669;"><b>`Haoming Yang`</b>` — Jinling Institute of Technology
-- `<span style="color:#DC2626;"><b>`Jingya Zhang`</b>` — Suzhou University of Technology
+- Huimei Sun — Suzhou University of Technology
+- Ziwen Qin — Suzhou University of Technology
+- Wangye Jiang — Suzhou University of Technology
+- Haoming Yang — Jinling Institute of Technology
+- Jingya Zhang — Suzhou University of Technology
+- Huiguo Zhang — Suzhou University of Technology
 
 ---
 
@@ -35,9 +36,9 @@ This repository contains the official implementation of **DCS-Net**, a **physica
 
 DCS-Net jointly models:
 
-- `<span style="color:#2563EB;"><b>`Raw I/Q features`</b>`
-- `<span style="color:#059669;"><b>`Magnitude / envelope information`</b>`
-- `<span style="color:#DC2626;"><b>`Phase-difference-aware representations`</b>`
+- Raw I/Q features
+- Magnitude / envelope information
+- Phase-difference-aware representations
 
 These complementary branches are fused together to improve recognition performance in difficult Doppler degradation scenarios.
 
